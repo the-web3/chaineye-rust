@@ -16,7 +16,7 @@ Chainey 社群： 官网 chaineye.info | Chaineye Rust 教程 | 微信: LGZAXE, 
 - 编写打印程序Hello, world!
 - 使用cargoRust 的包管理器和构建系统
 
-### 1. Rust 安装 
+## 1. Rust 安装 
 
 第一步是安装 Rust。我们将通过 下载 Rust rustup，这是一个用于管理 Rust 版本和相关工具的命令行工具。您需要互联网连接才能下载。
 
@@ -24,10 +24,10 @@ Chainey 社群： 官网 chaineye.info | Chaineye Rust 教程 | 微信: LGZAXE, 
 
 以下步骤安装最新稳定版本的 Rust 编译器。Rust 的稳定性保证确保本书中所有编译的示例将继续使用更新的 Rust 版本进行编译。不同版本的输出可能略有不同，因为 Rust 经常改进错误消息和警告。换句话说，您使用这些步骤安装的任何更新、稳定的 Rust 版本都应该与本书的内容一样工作。
 
-#### 命令行符号
+### 命令行符号
 在本章和整本书中，我们将展示一些在终端中使用的命令。您应该在终端中输入的行都以$. 您无需输入$字符；它指示每个命令的开始。不以开头的行$通常显示上一个命令的输出。此外，特定于 PowerShell 的示例将使用> 而不是$.
 
-#### 1. rustup在 Linux 或 macOS 上安装
+### 1. rustup在 Linux 或 macOS 上安装
 
 如果您使用的是 Linux 或 macOS，请打开终端并输入以下命令：
 
@@ -51,13 +51,13 @@ $ xcode-select --install
 
 Linux 用户通常应根据其发行版的文档安装 GCC 或 Clang。例如，如果您使用 Ubuntu，则可以安装该build-essential软件包。
 
-#### 2. rustup在 Windows 上安装
+### 2. rustup在 Windows 上安装
 
 在 Windows 上，转到https://www.rust-lang.org/tools/install并按照安装 Rust 的说明进行操作。在安装的某个时刻，您将收到一条消息，说明您还需要适用于 Visual Studio 2013 或更高版本的 C++ 构建工具。获取构建工具的最简单方法是安装Build Tools for Visual Studio 2019。当被问及要安装哪些工作负载时，请确保选择了“C++ 构建工具”并且包含了 Windows 10 SDK 和英语语言包组件。
 
 本书的其余部分使用可在cmd.exe和 PowerShell 中运行的命令。如果存在特定差异，我们将解释使用哪个。
 
-### 二. 更新和卸载
+## 二. 更新和卸载
 
 通过 安装 Rust 后rustup，更新到最新版本很容易。在您的 shell 中，运行以下更新脚本：
 
@@ -70,7 +70,7 @@ $ rustup update
 $ rustup self uninstall
 ```
 
-### 三. 故障排除
+## 三. 故障排除
 
 要检查是否正确安装了 Rust，请打开 shell 并输入以下行：
 ```
@@ -83,7 +83,7 @@ rustc x.y.z (abcabcabc yyyy-mm-dd)
 如果你看到这个信息，你已经成功安装了 Rust！如果您没有看到此信息并且您使用的是 Windows，请检查 Rust 是否在您的%PATH% 系统变量中。如果这一切都正确并且 Rust 仍然无法正常工作，那么您可以在很多地方获得帮助。最简单的是官方 Rust Discord上的 #beginners 频道​​。在那里，您可以与其他可以帮助您的 Rustaceans（我们称自己为愚蠢的昵称）聊天。其他重要资源包括用户论坛和Stack Overflow。
 
 
-### 四. 本地文档
+## 四. 本地文档
 
 Rust 的安装还包括本地文档的副本，因此您可以离线阅读。运行rustup doc以在浏览器中打开本地文档。
 
