@@ -2,7 +2,7 @@
 
 本教程由链眼社区出品
 
-[![savourlabs](images/pic_chang.png)](https://github.com/savour-labs)
+[![savourlabs](https://github.com/0xchaineye/chaineye-blockchain-interview/blob/main/images/pic_chang.png)](https://github.com/savour-labs)
 
 
 ## 基础篇
