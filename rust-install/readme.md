@@ -1,3 +1,15 @@
+# Rust 安装
+
+我最近在重新学rust ，巩固一下细节，也写一个Chaineye rust 教程，供想要学习的小伙伴查看。
+
+推特：@seek_web3
+
+Chainey 社群： 官网 chaineye.info | Chaineye Rust 教程 | 微信: LGZAXE, 加微信之后拉各社群 
+
+所有代码和教程开源在github: https://github.com/0xchaineye/chaineye-rust
+
+
+
 让我们开始你的 Rust 之旅吧！有很多东西要学，但每一次旅程都从某个地方开始。在本章中，我们将讨论：
 
 - 在 Linux、macOS 和 Windows 上安装 Rust
