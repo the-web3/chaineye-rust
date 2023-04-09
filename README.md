@@ -5,7 +5,9 @@
 [![savourlabs](https://github.com/0xchaineye/chaineye-blockchain-interview/blob/main/images/pic_chang.png)](https://github.com/savour-labs)
 
 
-## 基础篇
+## 教程目录
+
+### 基础篇
 
 #### 1. rust 安装 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/rust-install#readme)
 #### 2. Hello World [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/2-hello-world/readme.md)
@@ -15,16 +17,13 @@
 #### 6. 理解 rust 所有权 [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/06-rust-owner/readme.md)
 
 
-## 进阶篇
+### 进阶篇
 
 
-## 高级篇
+### 高级篇
 
 
-## 区块链项目实战篇
-
-
-[![savourlabs](images/pic_chang.png)](https://github.com/savour-labs)
+### 区块链项目实战篇
 
 ## 联系作者
 
