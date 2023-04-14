@@ -9,8 +9,8 @@
 
 ### 基础篇
 
-#### 1. rust 安装 [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/01-rust-install/readme.md)
-#### 2. Hello World [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/02-hello-world/readme.md)
+#### 1. rust 安装 - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/01-rust-install/readme.md)
+#### 2. Hello World - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/02-hello-world/readme.md)
 #### 3. Hello Gargo [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/03-hello-cargo/readme.md)
 #### 4. 编写猜字游戏 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/04-guess-game#readme)
 #### 5. 常见编程概念 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/05-program-concept#readme)
