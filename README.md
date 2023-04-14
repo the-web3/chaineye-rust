@@ -15,6 +15,8 @@
 #### 4. 编写猜字游戏 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/04-guess-game#readme)
 #### 5. 常见编程概念 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/05-program-concept#readme)
 #### 6. 理解 rust 所有权 [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/06-rust-owner/readme.md)
+#### 7. 使用结构来构造相关数据 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/07-rust-struct-type#readme)
+#### 8. 枚举和模式匹配 [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/08-rust-enum-mode#readme)
 
 
 ### 进阶篇
