@@ -1,4 +1,4 @@
-# 使用包、板条箱和模块管理成长中的项目
+# 使用 package、creates 和 modules 管理成长中的项目
 
 
 我最近在重新学rust ，巩固一下细节，也写一个Chaineye rust 教程，供想要学习的小伙伴查看。
