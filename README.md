@@ -35,8 +35,8 @@
 
 ### 进阶篇
 
-#### 1. rust 实现主流的数据结构与算法  - [教程]() ｜ [代码]()
-#### 2. rust web 框架介绍  - [教程]() ｜ [代码]()
+#### 1. rust 实现主流的数据结构与算法  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-01-algorithms-datastructures/readme.md) ｜ [代码]()
+#### 2. rust web 框架介绍  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-02-web/readme.md) ｜ [代码]()
 #### 3. rust 主流框架实现  - rest api [教程]() ｜ [代码]()
 #### 4. rust 操作数据库  - [教程]() ｜ [代码]()
 #### 5. rust 主流操作数据库 -  [教程]() ｜ [代码]()
