@@ -17,6 +17,19 @@
 #### 6. 理解 rust 所有权  -  [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/06-rust-owner/readme.md)
 #### 7. 使用结构来构造相关数据  -  [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/07-rust-struct-type#readme)
 #### 8. 枚举和模式匹配  - [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/08-rust-enum-mode#readme)
+#### 9. 使用 package、creates 和 modules 管理成长中的项目  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/09-package-project/readme.md)
+#### 10. 公共集合  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/10-common-sets/readme.md)
+#### 11. 错误处理  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/11-error/readme.md)
+#### 12. 通用类型、特征和生命周期  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/12-life-cycle/readme.md)
+#### 13. 编写自动化测试  - [教程]()
+#### 14. I/O 项目：构建命令行程序  - [教程]()
+#### 15. 函数式语言特性：迭代器和闭包  - [教程]()
+#### 16. 更多关于 Cargo 和 Crates.io  - [教程]()
+#### 17. 智能指针 - [教程]()
+#### 18. 并发编程 - [教程]()
+#### 19. Rust 的面向对象编程特性 - [教程]()
+#### 20. 模式与匹配 - [教程]()
+#### 21. 高级功能 - [教程]()
 
 ------------------------------------------------------------------------------------------------------------------------------
 
