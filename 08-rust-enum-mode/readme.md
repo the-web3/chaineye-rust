@@ -650,6 +650,106 @@ fn main() {
     
 在这里，我们明确地告诉 Rust，我们不会使用任何其他与早期 arm 中的模式不匹配的值，并且在这种情况下我们不想运行任何代码。
 
+## 三. 简洁的控制流程if let
+
+该if let语法使您可以将ifand组合let成一种不那么冗长的方式来处理与一个模式匹配的值，同时忽略其余模式。考虑清单 6-6 中的程序，它匹配变量Option<u8>中的一个值 config_max，但只想在该值是Some 变体时执行代码。
+
+``` 
+fn main() {
+    let config_max = Some(3u8);
+    match config_max {
+        Some(max) => println!("The maximum is configured to be {}", max),
+        _ => (),
+    }
+}
+```  
+    
+示例 6-6：Amatch只关心在值是时执行代码Some
+
+如果值为，我们通过将值绑定到模式中的变量来Some打印出变体中的值。我们不想对该值做任何事情。为了满足表达式，我们必须在处理完一个变体后添加，这是添加烦人的样板代码。SomemaxNonematch_ => ()
+
+相反，我们可以使用if let. match以下代码的行为与清单 6-6 中的相同：
+
+``` 
+fn main() {
+    let config_max = Some(3u8);
+    if let Some(max) = config_max {
+        println!("The maximum is configured to be {}", max);
+    }
+}
+``` 
+    
+语法if let采用由等号分隔的模式和表达式。它的工作方式与 a 相同match，其中表达式被赋予了 match并且模式是它的第一臂。在这种情况下，模式是 Some(max)，并且max绑定到 中的值Some。然后我们可以像在相应的手臂中使用的那样max在块的主体中​​使用。如果值与模式不匹配，则块中的代码不会运行。if letmaxmatchif let
+
+使用if let意味着更少的打字、更少的缩进和更少的样板代码。但是，您失去了执行的详尽检查match。match在 和之间进行选择if let取决于您在特定情况下所做的事情，以及获得简洁性是否是失去详尽检查的适当权衡。
+
+换句话说，您可以将其视为if leta 的语法糖match，它在值与一个模式匹配时运行代码，然后忽略所有其他值。
+
+我们可以包含 an elsewith an if let。随附的代码块与 等同于 and 的表达式中的 case else随附的代码块相同。回想一下 清单 6-4 中的枚举定义，其中变量也包含一个 值。如果我们想计算我们看到的所有非四分之一硬币的数量，同时还要宣布四分之一的状态，我们可以使用 如下表达式来实现：_matchif letelseCoinQuarterUsStatematch
+
+``` 
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn main() {
+    let coin = Coin::Penny;
+    let mut count = 0;
+    match coin {
+        Coin::Quarter(state) => println!("State quarter from {:?}!", state),
+        _ => count += 1,
+    }
+}
+``` 
+    
+或者我们可以使用if letandelse表达式，如下所示：
+
+```   
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
+fn main() {
+    let coin = Coin::Penny;
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}!", state);
+    } else {
+        count += 1;
+    }
+}
+```  
+    
+如果您遇到这样一种情况，即您的程序的逻辑过于冗长而无法使用 a 来表达match，请记住它if let也在您的 Rust 工具箱中。
+
+## 四.概括
+    
+我们现在已经介绍了如何使用枚举来创建可以是一组枚举值之一的自定义类型。我们已经展示了标准库的Option<T> 类型如何帮助您使用类型系统来防止错误。当枚举值中包含数据时，您可以使用matchorif let来提取和使用这些值，具体取决于您需要处理的情况。
+
+您的 Rust 程序现在可以使用结构和枚举来表达您领域中的概念。创建自定义类型以在您的 API 中使用可确保类型安全：编译器将确保您的函数仅获取每个函数期望的类型的值。
+
+为了向您的用户提供一个组织良好且易于使用且仅准确公开您的用户需要的 API，现在让我们转向 Rust 的模块。   
+    
 
 
 
