@@ -7,7 +7,7 @@
 
 ## 教程目录
 
-### 基础篇
+### 基础篇(基础篇翻译自：https://doc.rust-lang.org/book/)
 
 #### 1. rust 安装 - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/01-rust-install/readme.md)
 #### 2. Hello World - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/02-hello-world/readme.md)
