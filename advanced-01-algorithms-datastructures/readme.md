@@ -96,8 +96,37 @@ arr2 中的每个元素都出现在 arr1 中
 输出：[2,2,2,1,4,3,3,9,6,7,19]
 
 
+###### 下面是具体的实现代码
 
+```
+use std::collections::HashMap;
 
+fn relative_sort_array(arr1: Vec<i32>, arr2: Vec<i32>) -> Vec<i32> {
+    let mut count: HashMap<i32, i32> = HashMap::new(); // 统计 arr1 中各元素出现的次数
+    let mut result: Vec<i32> = Vec::new();
+    
+    // 统计 arr1 中各元素出现的次数
+    for num in arr1 {
+        *count.entry(num).or_insert(0) += 1;
+    }
+    
+    // 按照 arr2 中元素出现的顺序，将对应元素按照出现次数加入结果数组中，并将该元素在统计数组中的计数清零
+    for num in arr2 {
+        if let Some(c) = count.get_mut(&num) {
+            result.append(&mut vec![num; *c as usize]);
+            *c = 0;
+        }
+    }
+    
+    // 将剩余元素按照升序放入结果数组中
+    let mut rest: Vec<i32> = count.iter().filter(|&(_, &c)| c > 0).map(|(&k, &v)| vec![k; v as usize]).flatten().collect();
+    rest.sort();
+    result.append(&mut rest);
+    
+    result
+}
+```
+这段代码使用了 Rust 的 HashMap 来实现对 arr1 中各元素出现次数的统计。首先将 arr1 中各元素出现次数统计到 count HashMap 中，然后遍历 arr2，按照 arr2 中元素出现的顺序，将对应元素按照出现次数加入结果数组中，并将该元素在 count HashMap 中的计数清零。最后，将剩余元素按照升序放入结果数组中，这里使用了 filter 和 map 操作来过滤出 count HashMap 中计数大于 0 的元素，并将其转换为包含重复元素的 Vec，最后对该 Vec 进行升序排序后与结果数组合并。该代码的时间复杂度为 O(n log n)，其中 n 是 arr1 的长度。
 
 
 ### 3.2. 链表
