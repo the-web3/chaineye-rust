@@ -26,7 +26,114 @@ Hyper还提供了一个高级别的web框架hyper-rustacean，它简化了使用
 - [github 地址](https://github.com/hyperium/hyper)
 - [hyper.rs 网站](https://hyper.rs/)
 
-### 2.写一个 hyper 的案例
+### 2.用 hyper app 登陆注册的案例
+
+构建完项目之后，我们在 Cargo.toml 里面写入依赖包
+```
+[dependencies]
+bytes = "1"
+hyper = { version = "1.0.0-rc.3", features = ["full"] }
+tokio = { version = "1", features = ["full"] }
+http-body-util = "0.1.0-rc.2"
+serde_json = "1.0"
+pretty_env_logger = "0.4"
+serde = { version = "1.0.152", features = ["derive"] }
+```
+
+编写 app_info, login 和 注册的接口
+
+```
+async fn register(req: Request<IncomingBody>) -> Result<Response<BoxBody>> {
+    let whole_body = req.collect().await?.aggregate();
+    let mut data: serde_json::Value = serde_json::from_reader(whole_body.reader())?;
+    data["token"] = serde_json::Value::from("0x000000000000");
+    data["msg"] = serde_json::Value::from("register successs");
+    // And respond with the new JSON.
+    let json = serde_json::to_string(&data)?;
+    let response = Response::builder()
+        .status(StatusCode::OK)
+        .header(header::CONTENT_TYPE, "application/json")
+        .body(full(json))?;
+    Ok(response)
+}
+
+async fn login(req: Request<IncomingBody>) -> Result<Response<BoxBody>> {
+    // Aggregate the body...
+    let whole_body = req.collect().await?.aggregate();
+    // Decode as JSON...
+    let mut data: serde_json::Value = serde_json::from_reader(whole_body.reader())?;
+    // Change the JSON...
+    data["msg"] = serde_json::Value::from("login success");
+    // And respond with the new JSON.
+    let json = serde_json::to_string(&data)?;
+    let response = Response::builder()
+        .status(StatusCode::OK)
+        .header(header::CONTENT_TYPE, "application/json")
+        .body(full(json))?;
+    Ok(response)
+}
+
+async fn app_info() -> Result<Response<BoxBody>> {
+    let chaineye_app = AppInfoData {
+        name: String::from("chaineye.info"),
+        version: String::from("v1.0.1"),
+    };
+    let json = serde_json::to_string(&chaineye_app).unwrap();
+     let response = Response::builder()
+        .status(StatusCode::OK)
+        .header(header::CONTENT_TYPE, "application/json")
+        .body(full(json))?;
+    Ok(response)
+}
+```
+
+服务函数
+
+```
+async fn hyper_service(req: Request<IncomingBody>) -> Result<Response<BoxBody>> {
+    match (req.method(), req.uri().path()) {
+        (&Method::POST, "/register") => register(req).await,
+        (&Method::POST, "/login") => login(req).await,
+        (&Method::GET, "/app_info") => app_info().await,
+        _ => {
+            Ok(Response::builder()
+                .status(StatusCode::NOT_FOUND)
+                .body(full(NOTFOUND))
+                .unwrap())
+        }
+    }
+}
+
+fn full<T: Into<Bytes>>(chunk: T) -> BoxBody {
+    Full::new(chunk.into())
+        .map_err(|never| match never {})
+        .boxed()
+}
+
+#[tokio::main]
+async fn main() -> Result<()> {
+    pretty_env_logger::init();
+
+    let addr: SocketAddr = "127.0.0.1:1337".parse().unwrap();
+
+    let listener = TcpListener::bind(&addr).await?;
+    println!("Listening on http://{}", addr);
+    loop {
+        let (stream, _) = listener.accept().await?;
+
+        tokio::task::spawn(async move {
+            let service = service_fn(move |req| hyper_service(req));
+
+            if let Err(err) = http1::Builder::new()
+                .serve_connection(stream, service)
+                .await
+            {
+                println!("Failed to serve connection: {:?}", err);
+            }
+        });
+    }
+}
+```
 
 
 
