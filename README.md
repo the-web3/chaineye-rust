@@ -37,12 +37,16 @@
 
 #### 1. rust 实现主流的数据结构与算法  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-01-algorithms-datastructures/readme.md) ｜ [代码]()
 #### 2. rust web 框架介绍  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-02-web/readme.md) ｜ [hyper代码](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-02-web/code/hyper-server)
-#### 2. rust web 框架之 poem  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()
-#### 3. rust web 框架之 actix-web [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-04-actix-web#readme) ｜ [代码]()
-#### 4. rust web 框架之 rocket  - [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-05-rocket#readme) ｜ [代码]()
-#### 5. rust Orm -  [教程]() ｜ [代码]()
-#### 6. rust 实现 grpc server 和 client  -  [教程]() ｜ [代码]()
-#### 7. rust 实现聊天服务  - [教程]() ｜ [代码]()
+#### 3. rust web 框架之 poem - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()  
+#### 4. rust web 框架之 actix-web [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-04-actix-web#readme) ｜ [代码]()
+#### 5. rust web 框架之 Hyper [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-05-hyper/readme.md) ｜ [代码]()
+#### 6. rust web 框架之 rocket  - [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-05-rocket#readme) ｜ [代码]()
+#### 7. rust web 框架之 warp  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()
+#### 8. rust web 框架之 nickel  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()
+#### 9. rust web 框架之 tide  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()
+#### 10. rust Orm -  [教程]() ｜ [代码]()
+#### 11. rust 实现 grpc server 和 client  -  [教程]() ｜ [代码]()
+#### 12. rust 实现聊天服务  - [教程]() ｜ [代码]()
 
 
 ------------------------------------------------------------------------------------------------------------------------------
