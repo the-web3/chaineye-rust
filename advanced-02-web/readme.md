@@ -28,6 +28,8 @@ Hyper还提供了一个高级别的web框架hyper-rustacean，它简化了使用
 
 ### 2.用 hyper app 登陆注册的案例
 
+#### 代码解释
+
 构建完项目之后，我们在 Cargo.toml 里面写入依赖包
 ```
 [dependencies]
@@ -134,7 +136,46 @@ async fn main() -> Result<()> {
     }
 }
 ```
+#### 完整版代码编译执行
 
+- [完整版代码](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-02-web/code/hyper-server)
+
+- 代码构建
+
+```
+cd hyper-server
+cargo build
+```
+
+- target 里面启动项目
+
+```
+./hyper-server
+```
+
+- 代码测试
+
+```
+curl http://127.0.0.1:1337/app_info
+```
+
+```
+curl --location --request POST 'http://127.0.0.1:1337/register' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "aaa",
+    "password": "Qwer1234!"
+}'
+```
+
+```
+curl --location --request POST 'http://127.0.0.1:1337/login' \
+--header 'Content-Type: application/json' \
+--data-raw '{
+    "username": "aaa",
+    "password": "Qwer1234!"
+}'
+```
 
 
 ## actix-web， 
