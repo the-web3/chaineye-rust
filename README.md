@@ -36,7 +36,7 @@
 ### 进阶篇
 
 #### 1. rust 实现主流的数据结构与算法  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-01-algorithms-datastructures/readme.md) ｜ [代码]()
-#### 2. rust web 框架介绍  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-02-web/readme.md) ｜ [代码]()
+#### 2. rust web 框架介绍  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-02-web/readme.md) ｜ [hyper代码](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-02-web/code/hyper-server)
 #### 2. rust web 框架之 poem  - [教程](https://github.com/0xchaineye/chaineye-rust/blob/main/advanced-03-poem/readme.md) ｜ [代码]()
 #### 3. rust web 框架之 actix-web [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-04-actix-web#readme) ｜ [代码]()
 #### 4. rust web 框架之 rocket  - [教程](https://github.com/0xchaineye/chaineye-rust/tree/main/advanced-05-rocket#readme) ｜ [代码]()
