@@ -1,0 +1,29 @@
+[package]
+name = "poem-demo"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+argon2 = { version = "0.4.1", features = ["zeroize", "parallel"] }
+chrono = { version = "0.4.23", features = ["serde"] }
+derivative = "2.2.0"
+dotenvy = "0.15.6"
+futures = "0.3.25"
+jsonwebtoken = "8.2.0"
+opentelemetry = { version = "0.18.0", features = ["rt-tokio", "metrics"] }
+opentelemetry-jaeger = { version = "0.17.0", features = ["rt-tokio", "collector_client", "reqwest_collector_client", "reqwest_rustls_collector_client"] }
+password-hash = { version = "0.4.2", features = ["std"] }
+poem = { version = "1.3.50", features = ["rustls", "csrf", "cookie", "session", "opentelemetry", "prometheus", "static-files"] }
+poem-dbsession = { version = "0.3.51", features = ["sqlx-postgres-rustls"] }
+poem-openapi = { version = "2.0.21", features = ["chrono", "redoc", "redoc", "email", "uuid", "chrono"] }
+serde = { version = "1.0.152", features = ["derive"] }
+serde_json = { version = "1.0.91", features = ["raw_value"] }
+shuttle-secrets = "0.10.0"
+sqlx = { version = "0.6.2", features = ["runtime-tokio-rustls", "postgres", "uuid","chrono", "migrate", "macros"] }
+thiserror = "1.0.38"
+tokio = { version = "1.22.0", features = ["full"] }
+tracing = "0.1.37"
+tracing-opentelemetry = { version = "0.18.0", features = ["thiserror"] }
+tracing-subscriber = { version = "0.3.16", features = ["env-filter", "parking_lot", "json"] }
+unicode-normalization = "0.1.22"
+uuid = { version = "1.2.2", features = ["v4", "fast-rng", "serde"] }
