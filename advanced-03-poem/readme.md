@@ -240,42 +240,42 @@ let app = Route::new().at("/", index).with(Tracing);
 ## 9. Re-exports
 
 ```
-pub use error::Error;
-pub use error::Result;
-pub use middleware::Middleware;
-pub use web::FromRequest;
-pub use web::IntoResponse;
-pub use web::RequestBody;
+- pub use error::Error;
+- pub use error::Result;
+- pub use middleware::Middleware;
+- pub use web::FromRequest;
+- pub use web::IntoResponse;
+- pub use web::RequestBody;
 ```
 
 ## 10. Modules
 
-endpoint: endpoint 相关类型。
-error: 一些常见的错误类型。
-http: 常见 HTTP 类型的通用库
-i18n: 国际化
-listener: 常用的侦听器
-middleware: 常用的中间件
-session: 会话管理
-test: 测试实用程序来测试您的端点
-web: 	通常用作提取器或响应的类型。
+- endpoint: endpoint 相关类型。
+- error: 一些常见的错误类型。
+- http: 常见 HTTP 类型的通用库
+- i18n: 国际化
+- listener: 常用的侦听器
+- middleware: 常用的中间件
+- session: 会话管理
+- test: 测试实用程序来测试您的端点
+- web: 	通常用作提取器或响应的类型。
 
 ## 11. Structs
 
-Body: 请求和响应的正文对象
-OnUpgrade: 未来可能的 HTTP 升级
-Request: 表示 HTTP 请求
-RequestBuilder: 请求生成器
-RequestParts: HTTP 请求的组成部分
-Response: 表示 HTTP 响应
-ResponseBuilder: 响应生成器
-ResponseParts: 	HTTP 响应的组成部分
-Route: 路由对象
-RouteDomain: HOST标头的路由对象
-RouteMethod: HTTP 方法的路由对象
-RouteScheme: 请求方案的路由对象
-Server: HTTP 服务器
-Upgraded: 升级的 HTTP 连接
+- Body: 请求和响应的正文对象
+- OnUpgrade: 未来可能的 HTTP 升级
+- Request: 表示 HTTP 请求
+- RequestBuilder: 请求生成器
+- RequestParts: HTTP 请求的组成部分
+- Response: 表示 HTTP 响应
+- ResponseBuilder: 响应生成器
+- ResponseParts: 	HTTP 响应的组成部分
+- Route: 路由对象
+- RouteDomain: HOST标头的路由对象
+- RouteMethod: HTTP 方法的路由对象
+- RouteScheme: 请求方案的路由对象
+- Server: HTTP 服务器
+- Upgraded: 升级的 HTTP 连接
 
 ## 12.枚举
 
@@ -283,24 +283,24 @@ Addr: 一个网络地址
 
 ## 13. Traits
 
-Endpoint: HTTP 请求处理程序。
-EndpointExt: 的扩展特征Endpoint。
-IntoEndpoint:	表示可以转换为终结点的类型。
+- Endpoint: HTTP 请求处理程序。
+- EndpointExt: 的扩展特征Endpoint。
+- IntoEndpoint:	表示可以转换为终结点的类型。
 
 ## 14. 函数
 
-connect: 辅助函数，类似于RouteMethod::new().connect(ep).
-delete: 辅助函数，类似于RouteMethod::new().delete(ep).
-get: 辅助函数，类似于RouteMethod::new().get(ep).
-head: 辅助函数，类似于RouteMethod::new().head(ep).
-options: 辅助函数，类似于RouteMethod::new().options(ep).
-patch: 辅助函数，类似于RouteMethod::new().patch(ep).
-post: 辅助函数，类似于RouteMethod::new().post(ep).
-put: 辅助函数，类似于RouteMethod::new().put(ep).
-trace: 辅助函数，类似于RouteMethod::new().trace(ep).
+- connect: 辅助函数，类似于RouteMethod::new().connect(ep).
+- delete: 辅助函数，类似于RouteMethod::new().delete(ep).
+- get: 辅助函数，类似于RouteMethod::new().get(ep).
+- head: 辅助函数，类似于RouteMethod::new().head(ep).
+- options: 辅助函数，类似于RouteMethod::new().options(ep).
+- patch: 辅助函数，类似于RouteMethod::new().patch(ep).
+- post: 辅助函数，类似于RouteMethod::new().post(ep).
+- put: 辅助函数，类似于RouteMethod::new().put(ep).
+- trace: 辅助函数，类似于RouteMethod::new().trace(ep).
 
 ## 15.属性宏
 
-async_trait
-handler: 	将异步函数包装为Endpoint.
+- async_trait
+- handler: 	将异步函数包装为Endpoint.
 
