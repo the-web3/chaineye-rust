@@ -304,3 +304,5 @@ Addr: 一个网络地址
 - async_trait
 - handler: 	将异步函数包装为Endpoint.
 
+
+[更多细节参阅文档](https://docs.rs/poem/latest/poem/web/trait.FromRequest.html#)
